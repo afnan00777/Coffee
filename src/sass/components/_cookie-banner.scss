@@ -1,0 +1,71 @@
+@use '../abstracts/index' as *;
+
+.cookies-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 120;
+  background-color: color(color-banner);
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.25rem;
+  border-radius: 8px 8px 0 0;
+  @include tablet-small {
+    width: 650px;
+    padding: 1rem;
+  }
+
+  &--wrapper {
+    text-align: center;
+    @include tablet-small {
+      display: flex;
+      align-items: center;
+      text-align: left;
+      gap: 1.25rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    @include desktop {
+      gap: 1.5rem;
+    }
+  }
+
+  &--img {
+    max-width: 200px;
+    margin: 0 auto 1.5rem;
+
+    @include tablet-small {
+      margin: 0 auto;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &--content {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+    @include tablet-small {
+      display: block;
+    }
+    @include desktop {
+    }
+
+    p {
+      grid-column: 1 / -1;
+      .privacy-policy--link:link,
+      .privacy-policy--link:visited {
+        color: color(color-primary);
+        transition: color 0.3s;
+        &:hover {
+          color: color(color-light-op);
+        }
+      }
+    }
+  }
+}

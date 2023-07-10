@@ -1,0 +1,204 @@
+@use '../abstracts/index' as *;
+
+body {
+  line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: font-family(font-family-title), serif;
+  font-weight: 900;
+}
+
+p {
+  font-family: font-family(font-family-text);
+  line-height: 1.8;
+  @include title(color-light-dark, font-size-text);
+}
+
+//Utility Classes
+//steps - location
+.big-title {
+  @include title(color-light-dark, font-size-title-xxs);
+}
+
+.small-title {
+  @include title(color-dark, font-size-title-xs);
+}
+
+//navigation
+.nav {
+  .nav__links--item__link:link,
+  .nav__links--item__link:visited {
+    font-family: font-family('font-family-title'), serif;
+    font-weight: bold;
+    @include title(color-dark, font-size-title-xxs);
+
+    @include tablet {
+      font-family: font-family('font-family-text'), sans-serif;
+      @include title(color-light-dark, font-size-text);
+      font-weight: 400;
+    }
+  }
+}
+
+//header
+.header {
+  &__content--title {
+    @include title(color-light, font-size-title-m);
+
+    @include tablet-small {
+      font-size: font-size(font-size-title-l);
+    }
+    @include desktop {
+      font-size: font-size(font-size-title-xl);
+    }
+  }
+}
+
+//products
+.products {
+  &__title {
+    @include title(color-dark, font-size-title-m);
+    opacity: 0.8;
+
+    @supports (-webkit-background-clip: text) {
+      background: linear-gradient(color(color-light-dark), color(color-light));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @include tablet-small {
+      font-size: font-size(font-size-collection-tab);
+      opacity: 0.4;
+    }
+
+    @include desktop {
+      font-size: font-size(font-size-collection-desk);
+    }
+  }
+
+  &__presentation--card__title {
+    @include title(color-dark, font-size-title-xxs);
+  }
+}
+
+//Services
+.services {
+  padding: 4rem 1.5rem;
+  &__description--title {
+    @include title(color-light, font-size-title-xs);
+  }
+
+  .services__features--card__title {
+    @include title(color-light, font-size-title-xxs);
+  }
+}
+
+//Steps
+.steps {
+  &--content__card--number {
+    @include title(color-secondary, font-size-numbers);
+  }
+}
+
+//footer
+.footer-nav__list--item__link:link,
+.footer-nav__list--item__link:visited {
+  @include title(color-light-dark, font-size-footer);
+  font-family: font-family(font-family-text);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+//ABOUT
+.about__location--content__img {
+  font-size: 4.5rem;
+}
+
+.about__quality--content__title {
+  @include title(color-light, font-size-title-xs);
+  @include desktop {
+    font-size: font-size(font-size-title-m);
+  }
+}
+
+.about__description--content__title {
+  @include title(color-dark, font-size-title-s);
+  @include desktop {
+    font-size: font-size(font-size-title-m);
+  }
+}
+
+//Titles
+.capitalize {
+  text-transform: capitalize;
+  font-size: font-size(font-size-title-s);
+}
+
+//Order
+.order {
+  &--title {
+    font-family: font-family(font-family-text);
+    text-transform: uppercase;
+    font-weight: normal;
+    @include title(color-light-op, font-size-text);
+  }
+
+  &--text {
+    font-family: font-family(font-family-title);
+    @include title(color-light, font-size-title-xxs);
+    line-height: 1.8;
+  }
+}
+
+// Categories - plan
+.subscribe__categories {
+  @include desktop {
+    p {
+      @include title(color-dark, font-size-title-xxs);
+      font-weight: bold;
+      font-family: font-family(font-family-title);
+    }
+  }
+}
+
+//MODAL
+.modal {
+  &--title {
+    @include title(color-light, font-size-title-xs);
+
+    @include tablet {
+      font-size: font-size(font-size-title-m);
+    }
+  }
+
+  &--order {
+    @include title(color-light-dark, font-size-title-xxs);
+    font-family: font-family(font-family-title);
+  }
+
+  button {
+    font-family: font-family(font-family-title);
+  }
+
+  &--pricing {
+    p {
+      @include title(color-dark, font-size-title-xs);
+      font-family: font-family(font-family-title);
+    }
+  }
+}
+
+//Cookies Banner
+.cookies-banner {
+  &--content p,
+  &--content button {
+    @include title(color-light, font-size-footer);
+  }
+}

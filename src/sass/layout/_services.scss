@@ -1,0 +1,37 @@
+@use '../abstracts/index' as *;
+
+.services {
+  position: relative;
+
+  ::before {
+    @include before(0, 0, 100%, 60%, color-dark);
+    z-index: -1;
+    border-radius: 10px;
+  }
+  &__description {
+    padding: 0 0.5rem 4rem;
+    max-width: 500px;
+    margin: 0 auto;
+    &--title {
+      margin-bottom: 1.5rem;
+    }
+    &--para {
+      color: color(color-light-m);
+    }
+  }
+}
+
+.services__features {
+  @include flex(center, center, 1.5rem);
+  flex-direction: column;
+  align-content: center;
+
+  @include tablet {
+    text-align: left;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}

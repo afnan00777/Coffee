@@ -1,0 +1,24 @@
+@use '../abstracts/index' as *;
+
+.order {
+  text-align: left;
+  padding: 2rem 1.5rem;
+  background: url(../assets/plan/mobile/bg-order-summary.png) no-repeat
+    center/cover;
+  border-radius: 8px;
+
+  @include desktop {
+    background: url(../assets/plan/desktop/bg-order-summary.png) no-repeat
+      center/cover;
+    grid-column: 2 / 3;
+  }
+
+  &--title {
+    margin-bottom: 0.75rem;
+  }
+
+  span {
+    color: color(color-primary);
+    text-transform: capitalize;
+  }
+}

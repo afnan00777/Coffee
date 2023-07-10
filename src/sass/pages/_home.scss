@@ -1,0 +1,21 @@
+@use '../abstracts/index' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 7.5rem;
+}
+
+.container,
+.footer-container {
+  width: min(90%, 1280px);
+  margin: 0 auto;
+}
+
+.steps,
+.about__location {
+  @include tablet {
+    text-align: left;
+    margin-left: 3%;
+  }
+}

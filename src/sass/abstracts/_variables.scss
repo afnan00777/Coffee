@@ -1,0 +1,47 @@
+$colors: (
+  'color-primary': #0e8784,
+  'color-primary-m': #66d2cf,
+  'color-secondary': #fdd6ba,
+  'color-light': #fefcf7,
+  'color-light-m': #f4f1eb,
+  'color-light-op': rgba(244, 241, 235, 0.8),
+  'color-disabled': #e2dedb,
+  'color-light-dark': #83888f,
+  'color-lighter-dark': #dedede,
+  'color-dark': #333d4b,
+  'color-banner': #262e38,
+);
+
+$font-sizes: (
+  //Titles
+  'font-size-title-xxs': 1.5rem,
+  'font-size-title-xs': 1.75rem,
+  'font-size-title-s': 2rem,
+  'font-size-title-m': 2.5rem,
+  'font-size-title-l': 3rem,
+  'font-size-title-xl': 4.5rem,
+
+  //our collection (text)
+  'font-size-collection-tab': calc(1.5rem + 8vw),
+  'font-size-collection-desk': 10rem,
+
+  //Same on each device
+  'font-size-text': 1rem,
+  'font-size-text-m': 1.25rem,
+  'font-size-btn': 1.125rem,
+  'font-size-numbers': 4.5rem,
+  'font-size-footer': 0.75rem
+);
+
+$font-familys: (
+  'font-family-text': 'Barlow',
+  'font-family-title': 'Fraunces',
+);
+
+$breakpoints: (
+  'breakpoint-tablet-small': 500px,
+  'breakpoint-tablet-medium': 600px,
+  'breakpoint-tablet-normal': 768px,
+  'breakpoint-desktop': 1000px,
+  'breakpoint-desktop-2': 1080px,
+);

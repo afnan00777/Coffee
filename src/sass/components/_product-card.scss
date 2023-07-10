@@ -1,0 +1,16 @@
+@use '../abstracts/index' as *;
+
+.products__presentation--card {
+  margin: 0 auto;
+  padding: 0 0.5rem;
+
+  &__img {
+    max-width: 200px;
+    filter: blur(0);
+    transition: 0.6s;
+  }
+
+  &__title {
+    margin: 1.5rem 0 1rem;
+  }
+}
